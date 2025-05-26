@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️ 儿童节快乐 ❤️</title>
+    <style>
+        /* 基础样式 */
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            max-width: 800px;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        h1 {
+            color: #d23669;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+
+        /* 心跳动画 */
+        .heart {
+            font-size: 60px;
+            display: inline-block;
+            animation: beat 1s infinite alternate;
+            transform-origin: center;
+            margin: 15px 0;
+        }
+
+        @keyframes beat {
+            to { transform: scale(1.2); }
+        }
+
+        /* 照片容器 - 完美圆形 */
+        .photo-container {
+            width: 280px;
+            height: 280px;
+            margin: 20px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 8px solid white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .photo-container:hover {
+            transform: scale(1.03);
+        }
+
+        /* 照片样式 - 针对你的图片优化 */
+        .photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 18%; /* 重点调整这里！25%-35%之间微调 */
+            display: block;
+        }
+
+        /* 消息框 */
+        .message-box {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 25px 0;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .message {
+            display: none;
+            font-size: 1.1em;
+            line-height: 1.6;
+            padding: 10px;
+        }
+
+        .message.active {
+            display: block;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 按钮样式 */
+        .btn {
+            background: linear-gradient(to right, #d23669, #ff6b81);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(210, 54, 105, 0.3);
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(210, 54, 105, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        /* 音乐控制按钮 */
+        .music-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            background: #333;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            font-size: 1.2em;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+                width: 95%;
+            }
+            
+            .photo-container {
+                width: 220px;
+                height: 220px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .message {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1>ONLY FOR JOEY</h1>
+        
+        <div class="photo-container">
+            <img src="https://i.ibb.co/hxNKYVMr/20250523130719-19.jpg" 
+                 alt="Joey's Photo" 
+                 class="photo">
+        </div>
+        
+        <div class="message-box">
+            <div class="message active">Hello, dear Joey</div>
+            <div class="message">This is my first website created just for you</div>
+            <div class="message">Every line of code represents my affection</div>
+            <div class="message">Though simple, it carries my sincerest heart</div>
+            <div class="message">好了，我不装逼讲英语了</div>
+            <div class="message">原本我只是想和你说一声儿童节快乐</div>
+            <div class="message">但我觉得直接说好像又少了点什么</div>
+            <div class="message">于是我想到可以编程一个网页送给你</div>
+            <div class="message">就像各个app的年度报告一样</div>
+            <div class="message">但我水平有限，只能通过这些文字来和你互动</div>
+            <div class="message">在此之前，我甚至连代码长什么样都没见过</div>
+            <div class="message">但我现在可以在网页放上爱心、设计结构、放个bgm和把我想说的话说给你听</div>
+            <div class="message">谢谢你让我又多学会了一项技能</div>
+            <div class="message">那接下来</div>
+            <div class="message">就祝你</div>
+            <div class="message">儿童节快乐~永远做一个小孩儿~没有烦恼~天天开心~无忧无虑~</div>
+            <div class="message">还有笨蛋，你要记住</div>
+            <div class="message">无论什么时候</div>
+            <div class="message">你需要帮助、安慰、陪伴或者是仅仅有个人在</div>
+            <div class="message">永远有个Michael，信息不能保证每次都秒回，但你的来电一定能接通</div>
+            <div class="message">This is your private privilege</div>
+            <div class="message">Eventually, I am so lucky meeting you</div>
+            <div class="message">You light up my world like nobody else</div>
+            <div class="message">❤️ YOU ARE TRULY UNIQUE ❤️</div>
+            <div class="message">小彩蛋：猜猜这个网页我敲了多少字的代码？</div>
+            <div class="message">JOEY ❤️ THE END ❤️ ONLY</div>
+        </div>
+        
+        <button class="btn" id="nextBtn">Next Message</button>
+    </div>
+    
+    <!-- 只保留一个音乐控制按钮 -->
+    <div class="music-btn" id="musicBtn">♫</div>
+    
+    <!-- 使用更可靠的音乐源 -->
+    <audio id="bgMusic" loop>
+        <source src="https://assets.mixkit.co/music/493/493.mp3">
+        <!-- 备用源 -->
+        <source src="https://assets.mixkit.co/music/493/493.mp3">
+    </audio>
+    
+    <script>
+        // 消息切换功能
+        const messages = document.querySelectorAll('.message');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentMessage = 0;
+        
+        function showMessage(index) {
+            messages.forEach(msg => msg.classList.remove('active'));
+            messages[index].classList.add('active');
+            nextBtn.textContent = index === messages.length - 1 ? 'Start Again' : 'Next Message';
+        }
+        showMessage(0);
+        
+        nextBtn.addEventListener('click', () => {
+            currentMessage = (currentMessage + 1) % messages.length;
+            showMessage(currentMessage);
+        });
+
+        // 优化后的音乐控制
+        const musicBtn = document.getElementById('musicBtn');
+        const bgMusic = document.getElementById('bgMusic');
+        let musicPlaying = false;
+        
+        // 初始化音乐
+        bgMusic.volume = 0.3;
+        
+        // 自动播放尝试
+        function attemptPlay() {
+            bgMusic.play()
+                .then(() => {
+                    musicPlaying = true;
+                    musicBtn.textContent = '♪';
+                    console.log('音乐播放成功');
+                })
+                .catch(e => {
+                    console.log('自动播放被阻止:', e.message);
+                    musicBtn.style.display = 'flex';
+                });
+        }
+        
+        // 首次交互后尝试播放
+        function handleFirstInteraction() {
+            attemptPlay();
+            // 移除监听
+            ['click', 'touchstart', 'keydown'].forEach(evt => {
+                document.removeEventListener(evt, handleFirstInteraction);
+            });
+        }
+        
+        // 添加事件监听
+        ['click', 'touchstart', 'keydown'].forEach(evt => {
+            document.addEventListener(evt, handleFirstInteraction, { once: true });
+        });
+        
+        // 音乐按钮控制
+        musicBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // 防止触发document的click事件
+            
+            if (bgMusic.paused) {
+                bgMusic.play();
+                musicPlaying = true;
+                musicBtn.textContent = '♪';
+            } else {
+                bgMusic.pause();
+                musicPlaying = false;
+                musicBtn.textContent = '♫';
+            }
+        });
+        
+        // 初始尝试播放
+        attemptPlay();
+        
+        // 照片点击效果
+        document.querySelector('.photo-container').addEventListener('click', function() {
+            this.style.transform = 'scale(1.8)';
+            setTimeout(() => this.style.transform = 'scale(1)', 1000);
+        });
+    </script>
+</body>
+</html>
